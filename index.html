@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>okcook — Privacy Policy</title>
+<!-- Generated from store/privacy-policy.md by scripts/build-privacy.mjs. Do not edit by hand. -->
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto; padding: 48px 24px 96px; max-width: 720px;
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #15181d; background: #f8f6ef;
+  }
+  h1 { font-size: 32px; line-height: 1.2; letter-spacing: -.02em; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 36px 0 10px; letter-spacing: -.01em; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 22px; margin: 0 0 16px; }
+  a { color: #c2543a; }
+  code {
+    font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 3px;
+  }
+  blockquote {
+    margin: 16px 0; padding: 12px 16px; border-left: 3px solid #c2543a;
+    background: rgba(194,84,58,.07); border-radius: 0 6px 6px 0;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  em { color: #6e7178; font-style: normal; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2e8dd; background: #111; }
+    a { color: #ff8259; }
+    code { background: rgba(255,255,255,.09); }
+    blockquote { background: rgba(255,130,89,.1); border-left-color: #ff8259; }
+    em { color: #a89e93; }
+  }
+</style>
+</head>
+<body>
+<h1>okcook — Privacy Policy</h1>
+<p><em>Last updated: 15 August 2026 · applies to okcook v1.0.2</em></p>
+<p>okcook is a browser extension that reads a recipe from a page you are looking at and turns</p>
+<p>it into ingredients, steps and a shopping list. This policy describes exactly what it does</p>
+<p>with data, and it is written to be accurate rather than reassuring — the Chrome Web Store</p>
+<p>treats an inaccurate privacy disclosure as a policy violation, and so do we.</p>
+<h2>What stays on your device</h2>
+<p>Your meal plan, saved recipes, pantry items, shopping-list check-offs and display settings</p>
+<p>are stored locally in your browser using <code>chrome.storage.local</code>. They never leave your</p>
+<p>device. okcook has:</p>
+<ul>
+<li>no user accounts and no sign-in</li>
+<li>no analytics, telemetry, crash reporting or advertising</li>
+<li>no third-party SDKs of any kind</li>
+<li>no server that holds your recipes, meal plan, pantry or settings</li>
+</ul>
+<p>Uninstalling the extension removes all of it.</p>
+<h2>What leaves your device, and only when you ask</h2>
+<p><strong>1. The recipe page you asked okcook to read.</strong></p>
+<p>When you open okcook on a recipe page, the page is read locally in your browser and nothing</p>
+<p>is transmitted. When you instead paste a recipe URL into the Meal Planner, okcook fetches</p>
+<p>that URL so it can extract the recipe. That request goes to the recipe website itself, not</p>
+<p>to us. We do not receive it, log it or store it.</p>
+<p><strong>2. Feedback you choose to send.</strong></p>
+<p>The "Send feedback" form is the only feature that sends anything to us. Pressing send submits</p>
+<p>the report to a Google Form owned by the okcook developer. It is never sent automatically, and</p>
+<p>never without you pressing the button.</p>
+<p>What the report contains — all of it typed or chosen by you, or read from your own browser:</p>
+<ul>
+<li>the summary and description you typed</li>
+<li>the feedback type and impact you selected</li>
+<li><strong>your email address, only if you choose to enter it</strong> — it is optional, and its only use</li>
+</ul>
+<p>  is so we can reply to you</p>
+<ul>
+<li>the extension version, and your browser name and version</li>
+<li>the page address, if you started the report from okcook's "Report this page" link on a</li>
+</ul>
+<p>  page it couldn't read</p>
+<p>That is the whole report. okcook does not attach an identifier of any kind, and there is no</p>
+<p>account or device ID to attach. If you leave the email field blank, we have no way to know who</p>
+<p>sent it.</p>
+<p><strong>okcook does not collect your IP address.</strong> An earlier version of this form ran through a</p>
+<p>server that logged IP addresses to rate-limit abuse; that server is gone, and so is that</p>
+<p>collection.</p>
+<p><strong>Where it goes.</strong> Into a private response sheet that only the okcook developer can read.</p>
+<p><a href="https://policies.google.com/privacy">Google</a> acts as the processor, since it operates Forms —</p>
+<p>as with any website, Google's own servers see the request that delivers your report, under</p>
+<p>Google's privacy policy. Reports are not published, and are not posted to any public tracker.</p>
+<p><strong>How long it's kept.</strong> For as long as the response sheet exists. Ask us to delete a report</p>
+<p>and we will.</p>
+<p>If you never use the form, okcook sends nothing to us, ever.</p>
+<h2>What okcook never does</h2>
+<ul>
+<li>It does not collect or transmit your browsing history.</li>
+<li>It does not read pages you have not asked it to process. The content script that ships</li>
+</ul>
+<p>  with okcook registers a message listener and then does nothing until you invoke the</p>
+<p>  extension on that page.</p>
+<ul>
+<li>It does not sell or transfer your data to third parties.</li>
+<li>It does not use your data for advertising, credit assessment, lending, or any purpose</li>
+</ul>
+<p>  unrelated to the feature you invoked.</p>
+<ul>
+<li>It does not load or execute any remote code. Every script runs from the installed package.</li>
+</ul>
+<h2>Permissions and why they exist</h2>
+<p><strong><code>storage</code></strong> — keeps your meal plan, recipe book, pantry and settings on your device.</p>
+<p><strong>Host permission <code>&lt;all_urls&gt;</code></strong> — okcook cannot know in advance which recipe site you will</p>
+<p>use, so it cannot list them. The permission is used for two things only: reading the recipe</p>
+<p>on a page you have open when you invoke the extension, and fetching a recipe page when you</p>
+<p>paste its URL into the Meal Planner.</p>
+<h2>Children</h2>
+<p>okcook is not directed at children and does not knowingly collect data from anyone.</p>
+<h2>Changes</h2>
+<p>Material changes to this policy will be published here and reflected in the extension's</p>
+<p>store listing before they take effect.</p>
+<h2>Contact</h2>
+<p>Use the extension's built-in feedback form, or email <a href="mailto:okcook.feedback@gmail.com">okcook.feedback@gmail.com</a>.</p>
+</body>
+</html>
