@@ -4,118 +4,165 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>okcook — Privacy Policy</title>
+<meta name="description" content="How the okcook browser extension handles your data." />
 <!-- Generated from store/privacy-policy.md by scripts/build-privacy.mjs. Do not edit by hand. -->
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    --bg:      #f8f6ef;
+    --surface: #f2efe8;
+    --ink:     #15181d;
+    --ink-soft:#34383f;
+    --muted:   #6e7178;
+    --line:    #e8e4d7;
+    --accent:  #d9684a;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:      #111111;
+      --surface: #1a1a1a;
+      --ink:     #f2e8dd;
+      --ink-soft:#d4c8ba;
+      --muted:   #a89e93;
+      --line:    #2a2a2a;
+      --accent:  #ff8259;
+    }
+  }
+
   * { box-sizing: border-box; }
+
   body {
-    margin: 0 auto; padding: 48px 24px 96px; max-width: 720px;
-    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
-    color: #15181d; background: #f8f6ef;
+    margin: 0;
+    padding: clamp(2rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 2rem) 6rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 clamp(1rem, 0.97rem + 0.15vw, 1.0625rem)/1.65
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-  h1 { font-size: 32px; line-height: 1.2; letter-spacing: -.02em; margin: 0 0 8px; }
-  h2 { font-size: 20px; margin: 36px 0 10px; letter-spacing: -.01em; }
-  p, li { margin: 0 0 12px; }
-  ul { padding-left: 22px; margin: 0 0 16px; }
-  a { color: #c2543a; }
+
+  /* One column, centred, never wider than a comfortable measure. */
+  body > * { max-width: 44rem; margin-inline: auto; }
+
+  h1 {
+    font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin: 0 0 0.4rem;
+  }
+  h2 {
+    font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+    letter-spacing: -0.012em;
+    margin: 3rem 0 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  h3 {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 2rem 0 0.6rem;
+  }
+
+  p { margin: 0 0 1rem; color: var(--ink-soft); }
+  h1 + p { color: var(--muted); font-size: 0.9375rem; margin-bottom: 2rem; }
+
+  ul { margin: 0 0 1.25rem; padding-left: 1.15rem; }
+  li { margin: 0 0 0.5rem; color: var(--ink-soft); }
+  li::marker { color: var(--accent); }
+
+  strong { color: var(--ink); font-weight: 600; }
+  a { color: var(--accent); text-underline-offset: 0.15em; }
+
   code {
-    font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
-    background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 3px;
+    font: 0.85em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
   }
+
+  /* Wide content scrolls inside itself; the page never scrolls sideways. */
+  .table-wrap { overflow-x: auto; margin: 0 0 1.5rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+  th {
+    text-align: left;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 0 1rem 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  td {
+    padding: 0.7rem 1rem 0.7rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+  td.k { color: var(--ink); font-weight: 500; width: 34%; min-width: 9rem; }
+  tr:last-child td { border-bottom: 0; }
+
+  .flow {
+    margin: 0 0 1.5rem;
+    padding: 1.1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    overflow-x: auto;
+    font: 0.875rem/1.7 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--ink-soft);
+  }
+
   blockquote {
-    margin: 16px 0; padding: 12px 16px; border-left: 3px solid #c2543a;
-    background: rgba(194,84,58,.07); border-radius: 0 6px 6px 0;
+    margin: 0 0 1.5rem;
+    padding: 0.9rem 1.15rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
   }
   blockquote p:last-child { margin-bottom: 0; }
-  em { color: #6e7178; font-style: normal; }
-  @media (prefers-color-scheme: dark) {
-    body { color: #f2e8dd; background: #111; }
-    a { color: #ff8259; }
-    code { background: rgba(255,255,255,.09); }
-    blockquote { background: rgba(255,130,89,.1); border-left-color: #ff8259; }
-    em { color: #a89e93; }
-  }
+
+  em { color: var(--muted); font-style: normal; }
 </style>
 </head>
 <body>
 <h1>okcook — Privacy Policy</h1>
-<p><em>Last updated: 15 August 2026 · applies to okcook v1.0.2</em></p>
-<p>okcook is a browser extension that reads a recipe from a page you are looking at and turns</p>
-<p>it into ingredients, steps and a shopping list. This policy describes exactly what it does</p>
-<p>with data, and it is written to be accurate rather than reassuring — the Chrome Web Store</p>
-<p>treats an inaccurate privacy disclosure as a policy violation, and so do we.</p>
+<p><em>Applies to okcook v1.0.2 · Last updated 15 August 2026</em></p>
+<p>okcook is a browser extension that turns a recipe page into ingredients, steps and a shopping list. This policy states exactly what it does with your data.</p>
+<h2>At a glance</h2>
+<div class="table-wrap"><table><tbody><tr><td class="k">Accounts or sign-in</td><td>None</td></tr><tr><td class="k">Analytics, telemetry, crash reporting</td><td>None</td></tr><tr><td class="k">Advertising, tracking, profiling</td><td>None</td></tr><tr><td class="k">Third-party SDKs</td><td>None</td></tr><tr><td class="k">Data sold or transferred</td><td>None</td></tr><tr><td class="k">Sent to us automatically</td><td>Nothing</td></tr><tr><td class="k">Sent to us on request</td><td>Only a feedback report you write and submit</td></tr></tbody></table></div>
 <h2>What stays on your device</h2>
-<p>Your meal plan, saved recipes, pantry items, shopping-list check-offs and display settings</p>
-<p>are stored locally in your browser using <code>chrome.storage.local</code>. They never leave your</p>
-<p>device. okcook has:</p>
-<ul>
-<li>no user accounts and no sign-in</li>
-<li>no analytics, telemetry, crash reporting or advertising</li>
-<li>no third-party SDKs of any kind</li>
-<li>no server that holds your recipes, meal plan, pantry or settings</li>
-</ul>
-<p>Uninstalling the extension removes all of it.</p>
-<h2>What leaves your device, and only when you ask</h2>
-<p><strong>1. The recipe page you asked okcook to read.</strong></p>
-<p>When you open okcook on a recipe page, the page is read locally in your browser and nothing</p>
-<p>is transmitted. When you instead paste a recipe URL into the Meal Planner, okcook fetches</p>
-<p>that URL so it can extract the recipe. That request goes to the recipe website itself, not</p>
-<p>to us. We do not receive it, log it or store it.</p>
-<p><strong>2. Feedback you choose to send.</strong></p>
-<p>The "Send feedback" form is the only feature that sends anything to us. Pressing send submits</p>
-<p>the report to a Google Form owned by the okcook developer. It is never sent automatically, and</p>
-<p>never without you pressing the button.</p>
-<p>What the report contains — all of it typed or chosen by you, or read from your own browser:</p>
-<ul>
-<li>the summary and description you typed</li>
-<li>the feedback type and impact you selected</li>
-<li><strong>your email address, only if you choose to enter it</strong> — it is optional, and its only use</li>
-</ul>
-<p>  is so we can reply to you</p>
-<ul>
-<li>the extension version, and your browser name and version</li>
-<li>the page address, if you started the report from okcook's "Report this page" link on a</li>
-</ul>
-<p>  page it couldn't read</p>
-<p>That is the whole report. okcook does not attach an identifier of any kind, and there is no</p>
-<p>account or device ID to attach. If you leave the email field blank, we have no way to know who</p>
-<p>sent it.</p>
-<p><strong>okcook does not collect your IP address.</strong> An earlier version of this form ran through a</p>
-<p>server that logged IP addresses to rate-limit abuse; that server is gone, and so is that</p>
-<p>collection.</p>
-<p><strong>Where it goes.</strong> Into a private response sheet that only the okcook developer can read.</p>
-<p><a href="https://policies.google.com/privacy">Google</a> acts as the processor, since it operates Forms —</p>
-<p>as with any website, Google's own servers see the request that delivers your report, under</p>
-<p>Google's privacy policy. Reports are not published, and are not posted to any public tracker.</p>
-<p><strong>How long it's kept.</strong> For as long as the response sheet exists. Ask us to delete a report</p>
-<p>and we will.</p>
-<p>If you never use the form, okcook sends nothing to us, ever.</p>
-<h2>What okcook never does</h2>
-<ul>
-<li>It does not collect or transmit your browsing history.</li>
-<li>It does not read pages you have not asked it to process. The content script that ships</li>
-</ul>
-<p>  with okcook registers a message listener and then does nothing until you invoke the</p>
-<p>  extension on that page.</p>
-<ul>
-<li>It does not sell or transfer your data to third parties.</li>
-<li>It does not use your data for advertising, credit assessment, lending, or any purpose</li>
-</ul>
-<p>  unrelated to the feature you invoked.</p>
-<ul>
-<li>It does not load or execute any remote code. Every script runs from the installed package.</li>
-</ul>
-<h2>Permissions and why they exist</h2>
-<p><strong><code>storage</code></strong> — keeps your meal plan, recipe book, pantry and settings on your device.</p>
-<p><strong>Host permission <code>&lt;all_urls&gt;</code></strong> — okcook cannot know in advance which recipe site you will</p>
-<p>use, so it cannot list them. The permission is used for two things only: reading the recipe</p>
-<p>on a page you have open when you invoke the extension, and fetching a recipe page when you</p>
-<p>paste its URL into the Meal Planner.</p>
+<p>Your meal plan, saved recipes, pantry items, shopping-list check-offs and display settings are stored locally through <code>chrome.storage.local</code>. They never leave your device, and we operate no server that holds them. Uninstalling okcook removes all of it.</p>
+<h2>Reading a recipe</h2>
+<p>When you open okcook on a recipe page, the page is read locally in your browser and nothing is transmitted.</p>
+<p>When you paste a recipe URL into the Meal Planner, okcook fetches that page in order to extract the recipe. The request goes to the recipe website itself. We do not receive, log or store it.</p>
+<h2>Feedback you choose to send</h2>
+<p>The "Send feedback" form is the only feature that transmits anything to us, and it does so only when you press send.</p>
+<pre class="flow">you  →  Google Form  →  private response sheet</pre>
+<h3>What the report contains</h3>
+<div class="table-wrap"><table><thead><tr><th>Field</th><th>Detail</th></tr></thead><tbody><tr><td class="k">Summary and description</td><td>The text you type</td></tr><tr><td class="k">Feedback type and impact</td><td>The options you select</td></tr><tr><td class="k">Email address</td><td><strong>Optional.</strong> Included only if you enter one, and used solely to reply</td></tr><tr><td class="k">Extension version</td><td>For example, 1.0.2</td></tr><tr><td class="k">Browser name and version</td><td>For example, Chrome 120</td></tr><tr><td class="k">Page address</td><td>Only when you begin from the "Report this page" link</td></tr></tbody></table></div>
+<p>That is the entire report. okcook attaches no identifier, and holds no account or device ID to attach. <strong>okcook does not collect your IP address.</strong> If you leave the email field blank, we have no means of identifying the sender.</p>
+<h3>How it is handled</h3>
+<div class="table-wrap"><table><tbody><tr><td class="k">Destination</td><td>A private response sheet, readable only by the okcook developer</td></tr><tr><td class="k">Processor</td><td><a href="https://policies.google.com/privacy">Google</a>, which operates Forms and whose servers receive the submission</td></tr><tr><td class="k">Published</td><td>No. Reports appear on no public tracker</td></tr><tr><td class="k">Retention</td><td>For as long as the response sheet exists</td></tr><tr><td class="k">Deletion</td><td>Request removal of a report and we will delete it</td></tr></tbody></table></div>
+<p>If you never use the form, okcook transmits nothing to us.</p>
+<h2>What okcook does not do</h2>
+<ul><li>Collect or transmit your browsing history</li><li>Read pages you have not asked it to process. The bundled content script registers a message listener and stays idle until you invoke the extension on that page</li><li>Sell or transfer your data to third parties</li><li>Use your data for advertising, credit assessment or lending, or for any purpose unrelated to the feature you invoked</li><li>Load or execute remote code. Every script runs from the installed package</li></ul>
+<h2>Permissions</h2>
+<div class="table-wrap"><table><thead><tr><th>Permission</th><th>Why it exists</th></tr></thead><tbody><tr><td class="k"><code>storage</code></td><td>Keeps your meal plan, recipe book, pantry and settings on your device</td></tr><tr><td class="k"><code>&lt;all_urls&gt;</code></td><td>Recipe sites cannot be listed in advance. Used for three purposes only: reading the recipe on a page you have open when you invoke okcook, fetching a recipe page whose URL you paste into the Meal Planner, and submitting the feedback form when you press send</td></tr></tbody></table></div>
 <h2>Children</h2>
 <p>okcook is not directed at children and does not knowingly collect data from anyone.</p>
 <h2>Changes</h2>
-<p>Material changes to this policy will be published here and reflected in the extension's</p>
-<p>store listing before they take effect.</p>
+<p>Material changes to this policy will be published here and reflected in the extension's store listing before they take effect.</p>
 <h2>Contact</h2>
 <p>Use the extension's built-in feedback form, or email <a href="mailto:okcook.feedback@gmail.com">okcook.feedback@gmail.com</a>.</p>
 </body>
